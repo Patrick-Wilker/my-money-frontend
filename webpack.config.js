@@ -19,7 +19,7 @@ module.exports = {
             bootstrap: 'modules/admin-lte/bootstrap/js/bootstrap.js'
         }
     },
-    plugins: [
+    plugins: [ 
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery',
@@ -34,12 +34,12 @@ module.exports = {
             exclude: /node_modules/,
             query: {
                 presets: ['es2015', 'react'],
-                plugin: ['transform-object-rest-spread']
+                plugins: ['transform-object-rest-spread']
             }
         }, {
             test: /\.css$/,
             loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
-        },{
+        }, {
             test: /\.woff|.woff2|.ttf|.eot|.svg|.png|.jpg*.*$/,
             loader: 'file'
         }]
