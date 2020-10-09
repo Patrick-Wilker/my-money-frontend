@@ -18,7 +18,7 @@ class ItemList extends Component{
             this.props.arrayRemove('billingCycleForm', this.props.field, index)
         }
     }
-
+ 
     renderRows(){
         const list = this.props.list || []
         return list.map((item, index)=> (
